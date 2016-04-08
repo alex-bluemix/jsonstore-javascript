@@ -6,14 +6,14 @@ JSONStore is a lightweight, document-oriented storage system that enables persis
 * A simple API that allows developers to add, store, replace, search through documents without memorizing query syntax
 * Ability to track local changes
 
-# Installation
-
-The JSONStore SDK is available via [Cocoapods](http://cocoapods.org/). To install, add the JSONStore pod to your Podfile.
-
-```Ruby
-	platform :ios
-	pod 'JSONStore'
-	pod 'sqlite3'
+# Setup
+Include the following to your script tags. 
+```HTML
+<script src="libs/jquery.js"></script>
+<script src="libs/jsonstore_lodash.js"></script>
+<script src="libs/sjcl.min.js"></script>
+<script src="libs/jsonstore_stub.js"></script>
+<script src="jsonstore.js" data-cover></script>
 ```
 
 
