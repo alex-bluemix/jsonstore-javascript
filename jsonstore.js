@@ -269,6 +269,8 @@ constant = (function() {
 
 })(); //end constant
 
+JSONStoreUtil.constant = constant;
+
 /**
 Provides some validation methods
 @private

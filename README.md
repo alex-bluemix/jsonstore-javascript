@@ -61,7 +61,7 @@ JSONStore.init(collections, options)
         };
 
             // Get an accessor to the people collection and add data.
-            return WL.JSONStore.get(collectionName).add(data, addOptions);
+            return JSONStore.get(collectionName).add(data, addOptions);
     })
     .then(function (numberOfDocumentsAdded) {
         // Add was successful.
@@ -78,7 +78,7 @@ JSONStore.init(collections, options)
 var collectionName = 'people';
 
 // Find all documents that match the queries.
-var queryPart1 = WL.JSONStore.QueryPart()
+var queryPart1 = JSONStore.QueryPart()
                    .equal('name', 'carlos')
                    .lessOrEqualThan('age', 10)
 
@@ -93,7 +93,7 @@ var options = {
   filter: ['_id', 'json'],
 
   // How to sort the returned values, default no sort.
-  sort: [{name: WL.constant.ASCENDING}, {age: WL.constant.DESCENDING}]
+  sort: [{name: JSONStoreUtil.constant.ASCENDING}, {age: JSONStoreUtil.constant.DESCENDING}]
 };
 
 JSONStore.get(collectionName)
@@ -453,19 +453,19 @@ JSONStore.startTransaction()
 
         var data = [{name: 'kitsune'}];
 
-        return WL.JSONStore.get(collectionName).add(data);
+        return JSONStore.get(collectionName).add(data);
     })
 
     .then(function () {
 
         var docs = [{_id: 1, json: {name: 'donatsu'}}];
 
-        return WL.JSONStore.get(collectionName).remove(docs);
+        return JSONStore.get(collectionName).remove(docs);
     })
 
     .then(function () {
 
-        return WL.JSONStore.commitTransaction();
+        return JSONStore.commitTransaction();
     })
 
     .fail(function (errorObject) {
