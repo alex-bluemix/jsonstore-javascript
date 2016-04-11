@@ -1,5 +1,8 @@
 # Change Log
 
+## [1.0.1](https://github.com/ibm-bluemix-mobile-services/jsonstore-javascript/tree/1.0.1) (2016-04-11)
+[Full Changelog](https://github.com/ibm-bluemix-mobile-services/jsonstore-javascript/compare/1.0.0...1.0.1)
+
 ## [1.0.0](https://github.com/ibm-bluemix-mobile-services/jsonstore-javascript/tree/1.0.0) (2016-04-08)
 
 
